@@ -42,11 +42,10 @@ static int GetNumberByIndex(int number, int index)
     }
     else
     {
-        if (number >= Math.Pow(10, index - 1))
-            while (number >= Math.Pow(10, index))
-            {
-                number /= 10;
-            }
+        while (number >= Math.Pow(10, index))
+        {
+            number /= 10;
+        }
         digit = number % 10;
         return digit;
     }
