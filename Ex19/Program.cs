@@ -15,7 +15,7 @@
         break;
     }
     else
-        Console.WriteLine($"ОШИБКА! {userNumber} не является пятизначным");
+        Console.WriteLine($"ОШИБКА! {userNumber} НЕ ЯВЛЯЕТСЯ ПЯТИЗНАЧНЫМ");
 }
 
 
@@ -29,7 +29,7 @@ static int GetUserNumber(string message)
         {
             return userInput;
         }
-        else Console.WriteLine("ОШИБКА! Вы ввели некорректные данные");
+        else Console.WriteLine("ОШИБКА! ВЫ ВВЕЛИ НЕКОРРЕКТНЫЕ ДАННЫЕ");
     }
 }
 static int GetNumberByIndex(int number, int index)
