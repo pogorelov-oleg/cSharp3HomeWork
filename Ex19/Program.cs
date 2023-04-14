@@ -1,5 +1,6 @@
 ﻿int userNumber = GetUserNumber("Введите пятизначное число: ");
 
+
 int firstNumber = GetNumberByIndex(userNumber, 1);
 int lastNumber = GetNumberByIndex(userNumber, 5);
 int secondNumber = GetNumberByIndex(userNumber, 2);
@@ -8,6 +9,7 @@ if (firstNumber == lastNumber && secondNumber == fourthNumber)
     Console.Write($"{userNumber} является палиндромом");
 else
     Console.Write($"{userNumber} не является палиндромом");
+
 
 static int GetUserNumber(string message)
 {
@@ -27,7 +29,7 @@ static int GetNumberByIndex(int number, int index)
     int digit;
     if (index == 1)
     {
-        digit = number / 10000;    // хотел сделать вместо 10000 вот так: Math.Pow(10, index - 1), но это тип double и в переменной int я на него делить не могу. как решить я пока не разобрался.
+        digit = number / 10000;  
         return digit;
     }
     else
