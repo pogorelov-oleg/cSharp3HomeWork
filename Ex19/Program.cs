@@ -1,6 +1,5 @@
 ﻿int userNumber = GetUserNumber("Введите пятизначное число: ");
 
-
 int firstNumber = GetNumberByIndex(userNumber, 1);
 int lastNumber = GetNumberByIndex(userNumber, 5);
 int secondNumber = GetNumberByIndex(userNumber, 2);
