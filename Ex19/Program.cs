@@ -1,13 +1,22 @@
-﻿int userNumber = GetUserNumber("Введите пятизначное число: ");
+﻿while (true)
+{
+    int userNumber = GetUserNumber("Введите пятизначное число: ");
 
-int firstNumber = GetNumberByIndex(userNumber, 1);
-int lastNumber = GetNumberByIndex(userNumber, 5);
-int secondNumber = GetNumberByIndex(userNumber, 2);
-int fourthNumber = GetNumberByIndex(userNumber, 4);
-if (firstNumber == lastNumber && secondNumber == fourthNumber)
-    Console.Write($"{userNumber} является палиндромом");
-else
-    Console.Write($"{userNumber} не является палиндромом");
+    int firstNumber = GetNumberByIndex(userNumber, 1);
+    int lastNumber = GetNumberByIndex(userNumber, 5);
+    int secondNumber = GetNumberByIndex(userNumber, 2);
+    int fourthNumber = GetNumberByIndex(userNumber, 4);
+    if (userNumber >= 10000 && userNumber < 100000)
+    {
+        if (firstNumber == lastNumber && secondNumber == fourthNumber)
+            Console.WriteLine($"{userNumber} является палиндромом");
+        else
+            Console.WriteLine($"{userNumber} не является палиндромом");
+        break;
+    }
+    else
+        Console.WriteLine($"ОШИБКА! {userNumber} не является пятизначным");
+}
 
 
 static int GetUserNumber(string message)
@@ -20,7 +29,7 @@ static int GetUserNumber(string message)
         {
             return userInput;
         }
-        else Console.WriteLine("Вы ввели некорректные данные ");
+        else Console.WriteLine("ОШИБКА! Вы ввели некорректные данные");
     }
 }
 static int GetNumberByIndex(int number, int index)
@@ -28,7 +37,7 @@ static int GetNumberByIndex(int number, int index)
     int digit;
     if (index == 1)
     {
-        digit = number / 10000;  
+        digit = number / 10000;
         return digit;
     }
     else
@@ -38,8 +47,6 @@ static int GetNumberByIndex(int number, int index)
             {
                 number /= 10;
             }
-        else
-            Console.Write($"В числе {number} нет {index}-го значения");
         digit = number % 10;
         return digit;
     }
