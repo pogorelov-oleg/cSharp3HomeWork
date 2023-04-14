@@ -1,7 +1,6 @@
 ﻿while (true)
 {
     int userNumber = GetUserNumber("Введите пятизначное число: ");
-
     int firstNumber = GetNumberByIndex(userNumber, 1);
     int lastNumber = GetNumberByIndex(userNumber, 5);
     int secondNumber = GetNumberByIndex(userNumber, 2);
@@ -18,7 +17,6 @@
         Console.WriteLine($"ОШИБКА! {userNumber} НЕ ЯВЛЯЕТСЯ ПЯТИЗНАЧНЫМ");
 }
 
-
 static int GetUserNumber(string message)
 {
     while (true)
@@ -34,11 +32,11 @@ static int GetUserNumber(string message)
 }
 static int GetNumberByIndex(int number, int index)
 {
-    int digit;
+    int numberByIndex;
     if (index == 1)
     {
-        digit = number / 10000;
-        return digit;
+        numberByIndex = number / 10000;
+        return numberByIndex;
     }
     else
     {
@@ -46,7 +44,7 @@ static int GetNumberByIndex(int number, int index)
         {
             number /= 10;
         }
-        digit = number % 10;
-        return digit;
+        numberByIndex = number % 10;
+        return numberByIndex;
     }
 }
