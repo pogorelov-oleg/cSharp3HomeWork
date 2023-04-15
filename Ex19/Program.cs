@@ -35,7 +35,7 @@ static int GetNumberByIndex(int number, int index)
     int numberByIndex;
     if (index == 1)
     {
-        numberByIndex = number / 10000;
+        numberByIndex = number / 10000; 
         return numberByIndex;
     }
     else
