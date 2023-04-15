@@ -1,11 +1,21 @@
-﻿int n = GetUserNumber("Введите значение N: ");
-double pow;
-
-Console.Write($"{n} -> ");
-for (int i = 1; i < n; i++)
+﻿while (true)
 {
-    pow = Math.Pow(i, 3);
-    Console.Write($"{pow} ");
+    int n = GetUserNumber("Введите значение N: ");
+    double pow;
+
+    if (n > 0)
+    {
+
+        Console.Write($"{n} -> ");
+        for (int i = 1; i <= n; i++)
+        {
+            pow = Math.Pow(i, 3);
+            Console.Write($"{pow} ");
+        }
+        break;
+    }
+    else
+        Console.WriteLine("ОШИБКА! Нужно ввести значение больше нуля");
 }
 
 static int GetUserNumber(string message)
